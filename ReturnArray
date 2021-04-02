@@ -1,0 +1,19 @@
+
+public class ReturnArray {
+	static int[] temp() {
+		int realarray[] = new int[4];
+		for(int i=0;i<realarray.length;i++) {
+			realarray[i] = i;
+		}
+		return realarray;
+	}
+
+	public static void main(String[] args) {
+		int fakearray[] = temp();
+		for(int i=0;i<fakearray.length;i++) {
+			System.out.print(fakearray[i]+" ");
+		}
+
+	}
+
+}
