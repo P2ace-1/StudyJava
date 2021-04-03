@@ -1,0 +1,28 @@
+
+public class DoubleArray99 {
+	
+	static int[] number() {
+		int numarray[] = new int[9];
+		
+		for(int i =0; i<numarray.length;i++) {
+			numarray[i] = i+1;
+		}
+		return numarray;
+	}
+
+	public static void main(String[] args) {  // 어레이와 메소드를 이용한 구구단
+		
+		int a[] = number();  // 앞자리수 
+		int b[] = number();  // 뒷자리수
+		
+		for(int i=0; i<number().length;i++) {
+			for(int j=0; j<number().length;j++) {
+				System.out.print(a[i]+"*"+b[j]+"="+a[i]*b[j]);
+				System.out.print('\t');
+			}
+			System.out.println();
+		}
+		
+	}
+
+}
