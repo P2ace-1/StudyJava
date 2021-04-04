@@ -1,0 +1,45 @@
+public class Fraction {
+	int denominator;  //분모
+	int numerator;     //분자
+	
+	int denominator2;
+	int numerator2;
+	
+	public String fracsum() {
+		int sumn = (numerator  *denominator2 )  +(numerator2 *denominator  );   
+		int sumd = (denominator  * denominator2 );                              
+		return sumn+"/"+sumd;
+	}
+	public String fracminus() {
+		int minun = (numerator  *denominator2 )  -(numerator2 *denominator  );
+		int minud = (denominator  * denominator2 );       
+		return minun+"/"+minud;
+	}
+	public String fracx() {
+		int xn = (numerator * numerator2 );
+		int xd = (denominator * denominator2 ); 
+		return xn+"/"+xd;
+	}
+	public String fracdiv() {
+		int divn = (numerator * denominator2 );
+		int divd = (denominator * numerator2 );
+		return divn+"/"+divd;
+	}
+	
+	public static void main(String[] args) {
+		Fraction half = new Fraction();
+		half.denominator  = 2;
+		half.numerator  = 1;
+		System.out.println("분수1 = " + half.numerator  +"/"+half.denominator );
+		
+		half.denominator2  = 3;
+		half.numerator2  = 2;
+		System.out.println("분수2 = " + half.numerator2  +"/"+half.denominator2 );
+		System.out.println("덧셈 : "+half.fracsum());
+		System.out.println("뺄셈 : "+half.fracminus());
+		System.out.println("곱셈 : "+half.fracx());
+		System.out.println("나눗셈 : "+half.fracdiv());
+
+	}
+
+}
