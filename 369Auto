@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Game369Auto {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("1-99 중 숫자를 입력하세요 : ");
+		
+		int i = scanner.nextInt();
+		int ten = i/10;   // 십의자리 a
+		int one = i%10;   // 일의자리 b
+
+		if((one==3 || one==6 || one==9) && (ten==3 || ten==6 || ten==9)) {
+			System.out.print("짝짝");
+		}
+		else if ((ten==3 || ten==6 || ten==9) || (one==3 || one==6 || one==9)) {
+			System.out.print("짝");
+		}
+		else {
+			System.out.print("박수 없음");
+		}
+		scanner.close();
+
+	}
+
+}
