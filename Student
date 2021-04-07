@@ -1,0 +1,23 @@
+
+public class Student {
+	int grade;
+	String name;
+	String major;
+	
+	int computeAge() {
+		return grade + 19;
+	}
+
+	public static void main(String[] args) {
+		Student hong = new Student();
+		hong.grade = 3;
+		hong.name = "홍길동";
+		hong.major = "글로벌IT경영";
+		System.out.println("학년 : " + hong.grade);
+		System.out.println("이름 : " + hong.name);
+		System.out.println("전공 : " + hong.major);
+		System.out.println("나이 : " + hong.computeAge());
+
+	}
+
+}
