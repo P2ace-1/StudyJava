@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+class Books {
+	String titleString;
+	String authorString;
+	
+	public Books(String titleString, String authorString) {
+		this.titleString = titleString;
+		this.authorString = authorString;
+	}
+}
+public class BookArray {
+
+	public static void main(String[] args) {
+		Books b[] = new Books[2];
+		Scanner scanner = new Scanner(System.in);
+		
+		for(int i=0;i<b.length;i++) {
+			System.out.print("제목>> ");
+			String titleString = scanner.nextLine();
+			System.out.print("저자>> ");
+			String authorString = scanner.nextLine();
+			b[i] = new Books(titleString, authorString);
+		}
+		for(int i=0;i<b.length;i++) {
+			System.out.print("("+b[i].titleString + " " + b[i].authorString+")");
+			scanner.close();
+		}
+
+	}
+
+}
